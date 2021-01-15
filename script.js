@@ -50,7 +50,14 @@ for (var i = 0; i < botones.length; i++) {
 */
 
 // Tu código aquí
-function incrementarFunc() {}
+function incrementarFunc() {
+  let inicio = 0;
+  function incremento(){
+    return inicio += 1;
+    
+  }
+  return incremento;
+}
 
 // BOILERPLATE
 const actualizar = incrementarFunc();
@@ -70,12 +77,13 @@ incrementar.addEventListener("click", function() {
 const button = document.querySelector("#mostrar");
 const input = document.querySelector("#nombre");
 const resultado = document.querySelector("#resultado");
-const texto = "Aqui sale el resultado";
-resultado.innerText = texto;
+const texto = "";
 
 button.addEventListener("click", function() {
   if (input.value !== "") {
     const texto = input.value;
     resultado.innerText = texto;
+  } else {
+    resultado.innerText = "No Ingresaste nada";
   }
 });
